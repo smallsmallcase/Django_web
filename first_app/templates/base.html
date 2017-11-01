@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>base_title</title>
+</head>
+<body>
+<p>
+    <a href="{% url 'first_app:index' %}">Learning_log</a>
+    --
+    <a href="{% url 'first_app:topics' %}">Topics</a>
+</p>
+{% block content %}
+
+{% endblock content %}
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+    <p><a href="{% url 'first_app:topic' topic.id%}">{{ topic }}</a></p>
+    <p>Add a new entry:</p>
+    <form action="{% url 'first_app:new_entry' topic.id %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button name="submit">add entry</button>
+    </form>
+{% endblock %}
+</body>
+</html>
