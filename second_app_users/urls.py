@@ -12,4 +12,6 @@ urlpatterns = [
     url(r'^login/$', login,{'template_name': 'users/login.html'}, name='login'),
     # 注销
     url(r'^logout/$',view=views.logout_view, name='logout'),
+    # 注册页面
+    url(r'^register/$', view=views.register, name='register'),
 ]

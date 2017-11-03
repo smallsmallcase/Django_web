@@ -6,13 +6,14 @@
 </head>
 <body>
 <p>
-    <a href="{% url 'first_app:index' %}">Learning_log</a>
+    <a href="{% url 'first_app:index' %}">Home page</a>
     -
     <a href="{% url 'first_app:topics' %}">Topics</a>
     {% if user.is_authenticated %}
         Hello,{{ user.username }}
         <a href="{% url 'users:logout' %}">log out</a>
     {% else %}
+        <a href="{% url 'users:register' %}">register</a>-
         <a href="{% url 'users:login' %}">login in </a>
     {% endif %}
 </p>
